@@ -8,13 +8,13 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-favicon: figures/NEOF_favicon.png
+favicon: figures/CGR_favicon.png
 description: NEOF book for the Introduction to command line bioinformatics workshop
-cover-image: "figures/NEOF.png"
+cover-image: "figures/CGR_strips.png"
 ---
 
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
+```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
+knitr::include_graphics(path = "figures/CGR_large.png", auto_pdf = TRUE)
 ```
 
 # Introduction {#intro}
@@ -223,7 +223,7 @@ To copy a directory we need to add the option `-r` which means recursively copy 
 Use the below command to copy the workshop data to your current directory. The **"."** refers to your current directory.
 
 ```{bash eval=FALSE}
-cp -r /pub39/tea/matthew/NEOF/Linux/ .
+cp -r /pub39/tea/nsc006/Linux/ .
 ```
 
 Now change directory into your newly copied directory.
@@ -268,7 +268,7 @@ knitr::include_graphics(path = "figures/linux_box_structure.png", auto_pdf = TRU
 knitr::include_graphics(path = "figures/paths.png", auto_pdf = TRUE)
 ```
 
-On the command line directories and files are referred to by paths e.g. **"/pub39/tea/matthew/Linux/"** is a path.
+On the command line directories and files are referred to by paths e.g. **"/pub39/tea/nsc006/Linux/"** is a path.
 
 Paths are case sensitive. The path **"directory/file.txt"** is different than **"diRectory/File.txt"**.
 
@@ -280,7 +280,7 @@ There are multiple ways to refer to a path. The two main ways are through **abso
 
 Absolute paths are paths that start from the root e.g.
 
--   **"/pub39/tea/matthew/teaching/Linux/"**
+-   **"/pub39/tea/nsc006/Linux/"**
 -   **"\~/Linux/"** (In this case \~ is a shortcut which includes the root)
 -   **"/pub39/tea/nsc006/file.txt"**
 

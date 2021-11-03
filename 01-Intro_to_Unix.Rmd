@@ -8,13 +8,13 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-favicon: figures/NEOF_favicon.png
+favicon: figures/CGR_favicon.png
 description: NEOF book for the Introduction to command line bioinformatics workshop
-cover-image: "figures/NEOF.png"
+cover-image: "figures/CGR_strips.png"
 ---
 
-```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
-knitr::include_graphics(path = "figures/NEOF.png", auto_pdf = TRUE)
+```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
+knitr::include_graphics(path = "figures/CGR_large.png", auto_pdf = TRUE)
 ```
 
 # Introduction {#intro}
