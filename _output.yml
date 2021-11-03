@@ -3,8 +3,7 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
-      collapse: | 
-        section    
+      collapse: section    
       before: |
         <li class="toc-logo"><a href="https://www.liverpool.ac.uk/genomic-research/" target="blank"><img src="figures/CGR_strips.png"></a></li>
         <li><a>Intro to Unix</a></li>
