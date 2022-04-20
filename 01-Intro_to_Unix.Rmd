@@ -9,7 +9,7 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 favicon: figures/CGR_favicon.png
-description: NEOF book for the Introduction to command line bioinformatics workshop
+description: CGR book for the Introduction to command line bioinformatics workshop
 cover-image: "figures/CGR_strips.png"
 ---
 
