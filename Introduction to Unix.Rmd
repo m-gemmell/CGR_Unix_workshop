@@ -12,6 +12,23 @@ favicon: figures/CGR_favicon.png
 description: CGR book for the Introduction to command line bioinformatics workshop
 cover-image: "figures/CGR_strips.png"
 ---
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 
 ```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
 knitr::include_graphics(path = "figures/CGR_large.png", auto_pdf = TRUE)
@@ -48,6 +65,23 @@ Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the c
 
 <!--chapter:end:01-Intro_to_Unix.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # (PART\*) Part 1 {.unnumbered}
 
 # Linux {#linuxintro}
@@ -78,6 +112,23 @@ It is important to learn the Linux language so you can run commands on the comma
 
 <!--chapter:end:02-Linux_Introduction.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Starting
 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -170,6 +221,23 @@ man man
 
 <!--chapter:end:03-Starting.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Directories and Files {#dirsandfiles}
 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
@@ -289,7 +357,7 @@ Absolute paths are paths that start from the root e.g.
 Relative paths are paths that are relative to another location besides the root e.g.
 
 -   **"."** (This means the current working directory).
--   **".."** (This refers to one directory up e.g. if the current directory was **"/pub39/nsc006/"**, the **".."** directory would be **"/pub39/"**).
+-   **".."** (This refers to one directory up e.g. if the current directory was **"/pub39/tea/nsc006/"**, the **".."** directory would be **"/pub39/tea/"**).
 -   **"1_directory/"**, would refer to the directory **"1_directory/"** in your current directory
 
 ### Change directory examples
@@ -361,8 +429,72 @@ ls -1 /
 
 `ls` is my most typed command. I am consistently using it to see what directories and files are in my current directory and other directories. I suggest you do the same.
 
+## MCQs: Files & Directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`cp`__", "__`cd`__", answer="__`ls`__")
+```
+1. What command lists the contents of directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`cp`__", answer="__`cd`__", "__`ls`__")
+```
+2. What command changes directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`cp`__", "__`cd`__", "__`ls`__")
+```
+3. What command copies files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`~`__", answer="__`/`__", "__`..`__")
+```
+4.  Choose the option that represents the root directory.`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`~`__", "__`/`__", "__`..`__")
+```
+5. Choose the option that represents your home directory. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`~`__", "__`/`__", answer="__`..`__")
+```
+6. Choose the option that represents one directory above. `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__./Linux/__", answer="__/pub39/tea/nsc006/Linux/__")
+```
+7.  Which path is an absolute path? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__./Linux__", "__/pub39/tea/nsc006/Linux/__")
+```
+8.  Which path is a relative path? `r longmcq(opts_p)`
+
 <!--chapter:end:04-Directories_and_Files.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Tips and tricks {#tipsandtricks}
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/skateboard_trick.png", auto_pdf = TRUE)
@@ -456,14 +588,62 @@ This is useful to give yourself information about what your code is doing and it
 
 I also find it useful to put a `#` at the front of a long command that I am typing or editing. This means the command won't run if I accidentally press enter. Just be sure to remove the `#` at the start of the line before you want to run it.
 
-## Navigating directories
-```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
-knitr::include_graphics(path = "figures/tol.png", auto_pdf = TRUE)
-``` 
-With the skills and knowledge from the above sections you may want to practice navigating directories to get a better feel of it. For this purpose there is a directory called __"~/Linux/TOL"__. This contains directories and subdirectories in the structure of Bacterial and Archaeal taxonomy from the Silva 16S rRNA database.
+## MCQs: Tips & tricks
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_blue.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`#`__", answer="__Tab complete__", "__`clear`__")
+```
+1.  What allows you to auto fill paths and commands so you can quickly type without error? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`#`__", "__Tab complete__", answer="__`clear`__")
+```
+2. What command clears text from the terminal?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`#`__", "__Tab complete__", "__`clear`__")
+```
+3.  What symbol is used for annotation? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__Ctrl + c__", "__`\\\`__", "__Up and down arrow__")
+```
+4.  What keyboard short cut cancels/ends a command? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Ctrl + c__", "__`\\\`__", answer="__Up and down arrows__")
+```
+5.  What keys scroll through your previously run commands (aka history)?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__Ctrl + c__", answer="__`\\\`__", "__Up and down arrow__")
+```
+6.  Bash escape allows you to run commands over multiple lines. What symbol is used for bash escape?`r longmcq(opts_p)`
 
 <!--chapter:end:05-Tips_and_tricks.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Manipulating directories {#manipulatingdirectories}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
@@ -474,10 +654,10 @@ To make a directory the command `mkdir` is used.
 
 For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
 
-Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
+Type in the following commands to make a subdirectory within the __"CGR_Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
 ```{bash eval=FALSE}
-#Change directory to Linux in your home (~)
+#Change directory to CGR_linux in your home (~)
 cd ~/Linux/
 #Always good to list contents when you move into a directory
 ls
@@ -521,6 +701,11 @@ Move the Directory __"3_chicken_farm/3_1_hut/Chicken/"__ to __"3_chicken_farm/3_
 ```{bash eval=FALSE}
 #List the contents of the start directory
 ls ~/Linux/3_chicken_farm/3_1_hut
+#Move the Chicken directory whilst renaming it
+mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
+~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+#List the contents of the destination directory
+ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #Move the Chicken directory whilst renaming it
 mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
@@ -619,8 +804,57 @@ rm -r  3_1_hut_2
 ls
 ``` 
 
+## MCQs: Manipulating directories
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`rm`__", "__`mv`__", "__`ls`__")
+```
+1.  What command removes files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`rm`__", answer="__`mv`__", "__`ls`__")
+```
+2. What command moves files and directories? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`-r`__", answer="__`mkdir`__", "__`ls`__")
+```
+3.  What command makes a new directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
+```
+4.  What option is needed for moving or removing a directory? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
+```
+5.  What command list the contents of directories? `r longmcq(opts_p)`
+
 <!--chapter:end:06-Manipulating_directories.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Exercise 1
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
@@ -637,9 +871,28 @@ Change the name of the subdirectory __"four_exercises"__ within your __"Linux"__
     3. Copy the file __"copy_this_file.txt"__ to the directory __"to_me"__ 
     4. Rename the directory __"to_me"__ to __"you"__
     5. Delete the initial __"copy_this_file.txt"__ file
+    
+You can check my solutions in the [Answers section](#exercise1_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
 
 <!--chapter:end:07-Exercise1.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # (PART\*) Part 2 {-}
 
 # File reading and processing {#filereadingandprocessing}
@@ -679,7 +932,7 @@ __Remember__: The `clear` command.
 ```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
 knitr::include_graphics(path = "figures/head_and_tails.png", auto_pdf = TRUE)
 ``` 
-The `head`_command will print out to screen the top n lines of a file.
+The `head` command will print out to screen the top n lines of a file.
 
 The `tail` command will print out to screen the bottom n lines of a file.
 
@@ -891,14 +1144,67 @@ Using a text editor (__nano__ or __vim__) add an entry for Scientist Mae Jemison
 
 Using your text editor of choice delete all the scientists born before 1000 in the __"Scientist.txt"__ file and save this as __"Scientist_post_1000.txt"__.
 
-### Cheat sheet
-__Nano cheatsheet__: https://www.nano-editor.org/dist/latest/cheatsheet.html
+### Cheat sheets
+[__Nano cheatsheet__](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
-__Vim cheatsheet__: https://vim.rtorr.com/
+[__Vim cheatsheet__](https://vim.rtorr.com/)
 
+## MCQs: File reading and processing
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_purple.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`wc`__", answer="__`grep`__", "__`cat`__")
+```
+1.  What command searches for a pattern? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`wc`__", "__`grep`__", "__`cat`__")
+```
+2.  What command word counts files? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`wc`__", "__`grep`__", answer="__`cat`__")
+```
+3.  What command prints the contents of a file?`r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`less`__", "__`tail`__", "__`head`__")
+```
+4.  What command displays a file's contents one page at a time and allows keyboard navigation? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`less`__", "__`tail`__", answer="__`head`__")
+```
+5. What command prints out the top n lines of a file  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`less`__", answer="__`tail`__", "__`head`__")
+```
+6. What command prints out the bottom n lines of a file`r longmcq(opts_p)`
 
 <!--chapter:end:08-File_reading_and_processing.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Recap
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/recap.png", auto_pdf = TRUE)
@@ -931,14 +1237,32 @@ __Note__: There is a cheatsheet at the end of this book with these commands.
 
 <!--chapter:end:09-Recap.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Fastq format
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/files.png", auto_pdf = TRUE)
 ``` 
 The next exercise will focus on a set of files including fastq files.
 
-- A fastq file is very commonly used in bioinformatics. 
-- Fastq files contain the base content and its sequencing quality for sequences. 
+- Fastq files are very commonly used in bioinformatics.
+- Fastq files contain DNA or Amino acid sequenceing data.
+- Fastq files contain the nucleotide/amino acid content and its sequencing quality for sequences. 
 - Generally these files are separated by sample but not always.
 - A fastq file acts as a normal txt file that can be read but is of a specific format. 
 - One fastq file contains many fastq entries, one after the other. 
@@ -963,6 +1287,23 @@ https://en.wikipedia.org/wiki/FASTQ_format
 
 <!--chapter:end:10-Fastq.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Exercise 2
 ```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
@@ -981,8 +1322,27 @@ The directory __"~/Linux/6_final_exercise/"__ has all the files you need. Below 
 10. In the sample __1-P1__ remove any fastq entries where the term ‘psychrobacter’ appears in the fastq header. Do this for the R1 and R2 files.  
 11. Print to screen the fastq header, sequence and quality data for the 25th sequence in sample __2-P2__ for both the R1 and R2 file. Do this with one command for R1 and a separate command for R2.
 
+You can check my solutions in the [Answers section](#exercise2_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+
 <!--chapter:end:11-Exercise2.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # (PART\*) Advanced topics {-}
 
 # Advanced Linux practice {#advancedlinux}
@@ -1321,8 +1681,92 @@ All files, directories and programs have permissions. It is important to know ab
 Below is a useful link to learn about file permissions:  
 https://www.guru99.com/file-permissions.html
 
+## MCQs: File reading and processing
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/question_bubble_red.png", auto_pdf = TRUE)
+```
+
+Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+
+```{r, echo = FALSE}
+opts_p <- c("__`>`__", answer="__`|`__", "__`sed`__")
+```
+1.  Which symbol is used to pipe the output of one command to the input of another? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`>`__", "__`|`__", answer="__`sed`__")
+```
+2.  What command can be used to substitute text with other text? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`>`__", "__`|`__", "__`sed`__")
+```
+3.  Which symbol is used to redirect the output of a command to a file? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`*`__", "__`[]`__", answer="__`?`__")
+```
+4. Which wildcard represents a single character? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`*`__", "__`[]`__", "__`?`__")
+```
+5. Which wildcard represents zero or more characters? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`*`__", answer="__`[]`__", "__`?`__")
+```
+6. Which wildcard represents a range of characters? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.`__", answer="__`?`__", "__`*`__")
+```
+7. Which regular expression indicates that the preceding character matches 1 or 0 times? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`.`__", "__`?`__", "__`*`__")
+```
+8. Which regular expression represents a single character?  `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`.`__", "__`?`__", answer="__`*`__")
+```
+9. Which regular expression indicates that the preceding character matches zero or more times? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`|`__", "__`^`__", answer="__`$`__")
+```
+10. Which regular expression matches the end of the line? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c(answer="__`|`__", "__`^`__", "__`$`__")
+```
+11. Which regular expression is a logical OR operator? `r longmcq(opts_p)`
+
+```{r, echo = FALSE}
+opts_p <- c("__`|`__", answer="__`^`__", "__`$`__")
+```
+12. Which regular expression matches the start of the line? `r longmcq(opts_p)`
+
 <!--chapter:end:12-Advanced_linux_practice.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Advance practice exercise
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
@@ -1339,8 +1783,27 @@ knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 9. Count the number of Gs and Cs within file __sample_16_AACC.fastq__
 10. Get the fastq headers of sequences with homopolymers made of As with a length of 5 or greater for the uncorrected fastq files for samples 3,4,5,13,14 and 15 with one command.
 
+You can check my solutions in the [Answers section](#exerciseadv_answers). These are not the definitive solution but only examples of solutions. If your method works and you understand why then you have done it correctly.
+
 <!--chapter:end:13-Advanced_practice_exercise.Rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # Bioinformatic Languages {#bfxlanguages}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/languages.png", auto_pdf = TRUE)
@@ -1463,9 +1926,26 @@ https://www.rstudio.com/
 
 <!--chapter:end:14-Bioinformatica_languages.rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # (PART\*) Answers {-}
 
-# Exercise 1 {-}
+# Exercise 1 {-#exercise1_answers}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise.png", auto_pdf = TRUE)
 ``` 
@@ -1516,7 +1996,7 @@ f. Delete the initial copy_this_file.txt file
 rm copy_this_file.txt
 ```
 
-# Exercise 2 {-}
+# Exercise 2 {-#exercise2_answers}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/exercise_2.png", auto_pdf = TRUE)
 ``` 
@@ -1612,7 +2092,7 @@ grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R1_001.fastq
 grep -A 3 "@24_ecoli" 2-P2_AAGGACAC_L001_R2_001.fastq
 ```
 
-# Advanced exercise {-}
+# Advanced exercise {-#exerciseadv_answers}
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/adv_exercise.png", auto_pdf = TRUE)
 ``` 
@@ -1664,6 +2144,23 @@ sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
 
 <!--chapter:end:15-Answers.rmd-->
 
+```{r include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library(webexercises)
+})
+
+knitr::knit_hooks$set(webex.hide = function(before, options, envir) {
+  if (before) {
+    if (is.character(options$webex.hide)) {
+      hide(options$webex.hide)
+    } else {
+      hide()
+    }
+  } else {
+    unhide()
+  }
+})
+```
 # (APPENDIX) Appendix {.unnumbered}
 
 # Practical cheat sheet {#cheatsheet}
@@ -1712,5 +2209,53 @@ knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
 | vim         | Text editor                                      | vim /directory/path/file.txt                               |
 +-------------+--------------------------------------------------+------------------------------------------------------------+
 
-<!--chapter:end:16-Cheatsheet.rmd-->
+# Windows terminals
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/windows.png", auto_pdf = TRUE)
+```
+
+If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
+
+- [MobaXterm](https://mobaxterm.mobatek.net/)
+- [Putty](https://www.putty.org/)
+- [Ubuntu on Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
+# `ssh`
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/turtle_shell.png", auto_pdf = TRUE)
+```
+
+The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
+
+# File transferring
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/file_transfer.png", auto_pdf = TRUE)
+```
+
+When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
+
+For transferring on windows machine I would suggest [WinSCP](https://winscp.net/eng/index.php).
+
+For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
+
+# ANACONDA
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/conda.png", auto_pdf = TRUE)
+```
+
+Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using ANACONDA's `conda` for this purpose.
+
+Links:
+
+- [ANACONDA main page](https://www.anaconda.com/?modal=nucleus)
+- [Installing ANACONDA](https://docs.anaconda.com/anaconda/install/)
+- [Getting started with `conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+
+Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
+
+<!--chapter:end:16-Appendix.rmd-->
 

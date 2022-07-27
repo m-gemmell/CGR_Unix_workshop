@@ -1,6 +1,8 @@
 bookdown::gitbook:
-  css: style.css
   split_by: rmd
+  css:
+  - style.css
+  - www/webex.css
   config:
     toc:
       collapse: section
@@ -12,10 +14,6 @@ bookdown::gitbook:
     sharing: null
     download: null
     edit: null
-bookdown::pdf_book:
   includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: yes
-bookdown::epub_book: default
+    after_body: www/webex.js
+  md_extensions: -smart
