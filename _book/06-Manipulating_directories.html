@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Manipulating directories | Intro to Unix</title>
   <meta name="description" content="CGR book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Manipulating directories | Intro to Unix" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2022-08-04" />
+<meta name="date" content="2022-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -266,8 +266,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">6.1</span> Make a directory<a href="06-Manipulating_directories.html#make-a-directory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To make a directory the command <code>mkdir</code> is used.</p>
 <p>For the below examples we will be making heavy use of <code>ls</code> so you can hopefully visualise the contents of the directories.</p>
-<p>Type in the following commands to make a subdirectory within the <strong>"CGR_Linux"</strong> directory called <strong>"Chicken"</strong> then make a subdirectory within <strong>"Chicken"</strong> called <strong>"Egg"</strong>.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="06-Manipulating_directories.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change directory to CGR_linux in your home (~)</span></span>
+<p>Type in the following commands to make a subdirectory within the <strong>"Linux"</strong> directory called <strong>"Chicken"</strong> then make a subdirectory within <strong>"Chicken"</strong> called <strong>"Egg"</strong>.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="06-Manipulating_directories.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Change directory to Linux in your home (~)</span></span>
 <span id="cb26-2"><a href="06-Manipulating_directories.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Linux/</span>
 <span id="cb26-3"><a href="06-Manipulating_directories.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Always good to list contents when you move into a directory</span></span>
 <span id="cb26-4"><a href="06-Manipulating_directories.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
@@ -376,24 +376,24 @@ To delete files and directories the command <code>rm</code> can be used.</p>
 <p>Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.</p>
 <ol style="list-style-type: decimal">
 <li>What command removes files and directories?
-<div id="radio_BRIUJWNLWK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_BRIUJWNLWK" value="answer"></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BRIUJWNLWK" value=""></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BRIUJWNLWK" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_BIEGSOZQKE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BIEGSOZQKE" value="answer"></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BIEGSOZQKE" value=""></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_BIEGSOZQKE" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command moves files and directories?
-<div id="radio_KHNOTTMNKI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KHNOTTMNKI" value=""></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KHNOTTMNKI" value="answer"></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KHNOTTMNKI" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_DPPFZUFEFE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_DPPFZUFEFE" value=""></input> <span><strong><code>rm</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DPPFZUFEFE" value="answer"></input> <span><strong><code>mv</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_DPPFZUFEFE" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command makes a new directory?
-<div id="radio_LVAVZXFULR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LVAVZXFULR" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LVAVZXFULR" value="answer"></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_LVAVZXFULR" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_EYTRWUVTAM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EYTRWUVTAM" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EYTRWUVTAM" value="answer"></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_EYTRWUVTAM" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What option is needed for moving or removing a directory?
-<div id="radio_KGOLBUHUSF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KGOLBUHUSF" value="answer"></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGOLBUHUSF" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_KGOLBUHUSF" value=""></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_QOUJNIEXIU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QOUJNIEXIU" value="answer"></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QOUJNIEXIU" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_QOUJNIEXIU" value=""></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 <li>What command list the contents of directories?
-<div id="radio_WDPPBTFKNN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WDPPBTFKNN" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WDPPBTFKNN" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_WDPPBTFKNN" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
+<div id="radio_YJZCYTGARB" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YJZCYTGARB" value=""></input> <span><strong><code>-r</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJZCYTGARB" value=""></input> <span><strong><code>mkdir</code></strong></span></label><label><input type="radio" autocomplete="off" name="radio_YJZCYTGARB" value="answer"></input> <span><strong><code>ls</code></strong></span></label>
 </div></li>
 </ol>
 
