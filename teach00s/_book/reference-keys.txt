@@ -39,10 +39,9 @@ file-viewing-with-less
 word-count
 pattern-searching
 text-editor
+text-editor-1
 nano
-vim
 tasks
-cheat-sheets
 mcqs-file-reading-and-processing
 recap
 fastq-format
@@ -54,7 +53,7 @@ pipes
 regular-expressions
 sed
 permissions
-mcqs-file-reading-and-processing-1
+mcqs-advanced-linux
 advance-practice-exercise
 bfxlanguages
 awk
@@ -65,3 +64,4 @@ ruby
 golang-aka-go
 r
 cheatsheet
+vim

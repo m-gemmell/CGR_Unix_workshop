@@ -31,7 +31,7 @@ knitr::include_graphics(path = "figures/terminal_window.png", auto_pdf = TRUE)
 
 Already there is useful information for us on the terminal window.
 
--   **nsc006**: This is the login name, also known as the username. In this case nsc006 is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
+-   **nsc065**: This is the login name, also known as the username. In this case nsc065 is a demonstrator's account. Your screen should show a different account name which will be your username for the Linux machine/cluster you are logged into.
 -   **gauss03**: This is the machine name the user is logged into.
 -   **\~**: This represents the current directory of the user, or the directory a command was run in. In the Linux OS and others **'\~'** is a shortcut to the user's home directory.
 -   Everything after the **'\$'** is where commands are typed into the terminal. This is also referred to as the command line.

@@ -36,9 +36,8 @@ pwd
 In this case it will not show a **"\~"** but the full path of your home directory. E.g. **"/home/tu006/"**.
 
 -   The first **"/"** is the root of the system. Every directory, subdirectory, file and program of the machine is within the root.
--   **"pub39/"**: A directory within the root.
--   **"tea/"**: A subdirectory of **"pub39/"** and a sub-subdirectory of the root (**"/"**).
--   **"nsc006"**: The home directory of user nsc006. It is a subdirectory of **"tea/"** which is a subdirectory of **"pub39/"** which is a subdirectory of the root (**"/"**).
+-   **"home/"**: A directory within the root.
+-   **"tu006"**: The home directory of user tu006 It is a subdirectory of **"home/"**  which is a subdirectory of the root (**"/"**).
 
 ### Copying
 
