@@ -173,16 +173,6 @@ The above command will be stuck as `grep` does not know what it is looking for. 
 ```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
 knitr::include_graphics(path = "figures/text_editor.png", auto_pdf = TRUE)
 ``` 
-Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below is a quick introduction to __nano__. 
-
-__nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
-
-Please learn oose either __nano__ or __vim__ to learn now and go through its section.
-
-## Text editor
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/text_editor.png", auto_pdf = TRUE)
-``` 
 Three of the most popular text editors are __vim__, __gedit__ and __nano__. Below are quick introductions to __nano__ and __vim__. 
 
 __nano__ is the easiest to learn but is quite limiting. __vim__ and __gedit__ are quite similar in power with different people preferring one or the other. 
