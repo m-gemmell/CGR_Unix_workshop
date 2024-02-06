@@ -533,7 +533,7 @@ In the below examples press the tab button when you see __\<tab>__ and __replace
 
 Move into the directory __"1_directory"__
 ```{bash eval=FALSE}
-cd /home/tuxxx<tab>xxx<tab>L<tab>1_d<tab>
+cd /home/tuxxx<tab>L<tab>1_d<tab>
 ``` 
 
 Print out all the content within the current directory that starts with __"1_"__ in the file or directory name. This is carried out with a double tab.
