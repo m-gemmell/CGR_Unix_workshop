@@ -1,12 +1,19 @@
 # Manipulating directories {#manipulatingdirectories}
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/transform.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/transform.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
+`r hide("Chapter 6 video walk-through")`
+<div class="container">
+<iframe src="https://www.youtube.com/embed/5PguHkogxjI" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+`r unhide()`
 
 ## Make a directory
 To make a directory the command `mkdir` is used.
 
-For the below examples we will be making heavy use of `ls` so you can hopefully visualise the contents of the directories.
+For the below examples we will be making heavy use of `ls` to visualise the contents of the directories.
 
 Type in the following commands to make a subdirectory within the __"Linux"__ directory called __"Chicken"__ then make a subdirectory within __"Chicken"__ called __"Egg"__.
 
@@ -26,9 +33,9 @@ ls Chicken
 __Tip__: You can use the up arrow key to get to previously run commands which you can edit using the right and left keys.
 
 ## Moving Directories and Files
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/chicken.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/chicken.png){style="width:200px"}
+</center>
 
 Files and directories can be moved with the `mv` command. This can also be used to change the name of a file or a directory.
 
@@ -59,14 +66,14 @@ ls ~/Linux/3_chicken_farm/3_1_hut
 mv ~/Linux/3_chicken_farm/3_1_hut/Chicken/ \
 ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
 #List the contents of the destination directory
-ls ~/Linux/3_chicken_farm/3_2_field/Outdoor_Chicken
+ls ~/Linux/3_chicken_farm/3_2_field/
 ``` 
 
 Move the file __"3_chicken_farm/3_3_supplies/feed.txt"__ to the directory __"3_chicken_farm/3_2_field"__ and rename it __"used_feed.txt"__
 
 ```{bash eval=FALSE}
 #List start directory to see if the feed.txt file exists
-ls 3_chicken_farm/3_3_supplies/feed.txt
+ls 3_chicken_farm/3_3_supplies/
 #Move and rename the feed.txt file
 mv 3_chicken_farm/3_3_supplies/feed.txt \
 3_chicken_farm/3_2_field/used_feed.txt
@@ -75,9 +82,9 @@ ls 3_chicken_farm/3_2_field/
 ``` 
 
 ## Copying Directories and Files
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/copy.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/copy.png){style="width:150px; background:white; border-radius:5px; border: 5px solid white"}
+</center>
 
 Files and directories can be copied with the `cp` command. Directories and files can be copied to any directory and given a new name.
 Note: If you copy a file to the path of a file that already exists, the pre existing file will be overwritten.
@@ -102,7 +109,7 @@ cp 3_1_hut/Laid_Egg.txt 3_2_field/Chick.txt
 ls 3_2_field
 ``` 
 
-Copy the file __"3_2_hut/Chick.txt"__ and give the copy the name __"Chick_2.txt"__
+Copy the file __"3_2_field/Chick.txt"__ and give the copy the name __"Chick_2.txt"__
 
 ```{bash eval=FALSE}
 #List contents of 3_2_field
@@ -124,9 +131,10 @@ ls
 ``` 
 
 ## Deleting Files and Directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/erase.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/erase.png){style="width:200px; border-radius:15px; background:white"}
+</center>
+
 To delete files and directories the command `rm` can be used. 
 
 __Important__: This command can be very dangerous. There is no recycle bin on Linux machines so once you delete something it cannot be recovered. Be very careful when deleting files and directories. To avoid major loss try to keep backups of important data and scripts.
@@ -154,11 +162,11 @@ ls
 ``` 
 
 ## MCQs: Manipulating directories
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/question_bubble_green.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/question_bubble_green.png){style="width:200px"}
+</center>
 
-Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
+Splendid! Please attempt to answer the below Multiple-Choice Questions to reinforce what you have learnt in this chapter.
 
 ```{r, echo = FALSE}
 opts_p <- c(answer="__`rm`__", "__`mv`__", "__`ls`__")
@@ -183,4 +191,4 @@ opts_p <- c(answer="__`-r`__", "__`mkdir`__", "__`ls`__")
 ```{r, echo = FALSE}
 opts_p <- c("__`-r`__", "__`mkdir`__", answer="__`ls`__")
 ```
-5.  What command list the contents of directories? `r longmcq(opts_p)`
+5.  What command lists the contents of directories? `r longmcq(opts_p)`

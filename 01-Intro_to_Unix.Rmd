@@ -1,5 +1,5 @@
 ---
-title: "Intro to Unix"
+title: "Intro to Linux"
 author: "Matthew R. Gemmell"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -10,38 +10,97 @@ biblio-style: apalike
 link-citations: yes
 favicon: figures/CGR_favicon.png
 description: CGR book for the Introduction to command line bioinformatics workshop
-cover-image: "figures/CGR_strips.png"
+cover-image: "figures/CGR_large.png"
 ---
 
-```{r, fig.align = 'center',out.width= '60%', echo=FALSE }
-knitr::include_graphics(path = "figures/CGR_large.png", auto_pdf = TRUE)
+```{r, echo=FALSE}
+#Change colour, border, and text of code chunks
+#Check style.css for .Rchunk
+#https://stackoverflow.com/questions/65627531/change-r-chunk-background-color-in-bookdown-gitbook
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
+knitr::opts_chunk$set(class.source="Rchunk") 
 ```
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
+
+<center>
+![](figures/CGR_large.png){style="width:400px; border-radius:5px"}
+</center>
+
 
 # Introduction {#intro}
 
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/map.png", auto_pdf = TRUE)
-```
+<center>
+![](figures/linux_beginner.png){style="width:200px"}
+</center>
 
-This practical session aims to introduce you to Linux and its applications. The topics covered are:
+Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
 
--   [What is Linux?](#linuxintro)
--   [Logging in to our teaching VNC](#cluster)
--   [Directories and files](#dirsandfiles)
--   [Tips and tricks](#tipsandtricks)
--   [Manipulating Directories](#manipulatingdirectories)
--   [File reading and processing](#filereadingandprocessing)
--   [Advanced Linux](#advancedlinux)
--   [Other Bioinformatics programming languages](#bfxlanguages)
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
 
-The aim of this practical is to cover everything up to, but not including, Advanced Linux. This will give you sufficient skills in Linux to carry out the other practicals in this workshop. If you are already familiar with Linux or you are a quick learner, please look at the Advanced Linux session followed by the Other Bioinformatics programming languages.
+At the end of the course learners will be able to:
 
-Commands are in the following font, colour, and box.They should be run in the command line.
+-   Explain how the user, shell, and kernel interact with each other in the Linux OS.
+-   Navigate & manipulate directories in the Linux environment.
+-   List and view the contents of directories.
+-   Carry out a variety of commands with files including printing them to terminal.
+-   Utilise the text editor nano to create, edit, and save files.
+-   Understand the structure of fastq files.
+
+There are additional materials in chapters 12-14 which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.
+
+Commands are in the following font, colour, and box. They should be run in the command line.
 
 ```{bash eval=FALSE}
 echo "This is a command example" 
 ```
 
-Additionally please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
+In some chapters there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the chapter. These are found in an expandable box at the start of the chapters 4, 5, 6, and 8.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+Additionally, please use the [cheatsheet](#cheatsheet) as a reminder of all the commands you will be learning.
+
+## Table of contents {.unnumbered}
+
+```{r, echo=FALSE, align="centre"}
+#Create 2 coilumn dataframe
+column_1 <- c(
+ '[**What is Linux?**](#linuxintro)', 
+ '[![](figures/linux_beginner.png){height="150"}](#linuxintro)',
+ '[**Directories and files**](#dirsandfiles)',
+ '[![](figures/directory.png){height="150"}](#dirsandfiles)',
+ '[**Manipulating Directories**](#manipulatingdirectories)',
+ '[![](figures/transform.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#manipulatingdirectories)',
+ '[**Advanced Linux**](#advancedlinux)',
+ '[![](figures/linux_intermdiary.png){height="150"}](#advancedlinux)',
+ '[**Appendix**](#cheatsheet)',
+ '[![](figures/cheatsheet.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#cheatsheet)'
+)
+column_2 <- c(
+  '[**Logging in to our teaching VNC**](#cluster)',
+ '[![](figures/start.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#cluster)',
+ '[**Tips and tricks**](#tipsandtricks)',
+ '[![](figures/skateboard_trick.png){height="150"}](#tipsandtricks)',
+ '[**File reading and processing**](#filereadingandprocessing)',
+ '[![](figures/files.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#filereadingandprocessing)',
+ '[**Other Bioinformatics programming languages**](#bfxlanguages)',
+ '[![](figures/languages.png){style="height:150px; border-radius:15px; background:white; border: white solid 5px"}](#bfxlanguages)',
+ "",""
+)
+table_df <- data.frame(column_1, column_2)
+#Kable and kableextra libraries
+library(knitr)
+library(kableExtra)
+#Create table
+#ALign both column in centre (align = "cc")
+table_df %>%
+  kbl(align= "cc", col.names = NULL) %>%
+  kable_styling(position = "center")
+```
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

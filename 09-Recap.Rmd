@@ -1,7 +1,7 @@
 # Recap
-```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
-knitr::include_graphics(path = "figures/recap.png", auto_pdf = TRUE)
-``` 
+<center>
+![](figures/recap.png){style="width:200px; border-radius:15px; background:white"}
+</center>
 
 Throughout this practical we have covered the topics:
 
@@ -24,6 +24,6 @@ Throughout this practical we have covered the topics:
 * Looking at files
     + Commands: `cat`, `head`, `tail`, `less`, `wc`, `grep`
 * Text editor
-    + Commands: `vim`
+    + Commands: `nano`
     
-__Note__: There is a cheatsheet at the end of this book with these commands.
+__Note__: There is a [cheatsheet](#cheatsheet) at the end of this book with these commands.

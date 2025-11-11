@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Bioinformatic Languages | Intro to Unix</title>
+  <title>Chapter 14 Bioinformatic Languages | Intro to Linux</title>
   <meta name="description" content="CGR book for the Introduction to command line bioinformatics workshop" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Bioinformatic Languages | Intro to Unix" />
+  <meta property="og:title" content="Chapter 14 Bioinformatic Languages | Intro to Linux" />
   <meta property="og:type" content="book" />
-  <meta property="og:image" content="/figures/CGR_strips.png" />
+  <meta property="og:image" content="/figures/CGR_large.png" />
   <meta property="og:description" content="CGR book for the Introduction to command line bioinformatics workshop" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Bioinformatic Languages | Intro to Unix" />
+  <meta name="twitter:title" content="Chapter 14 Bioinformatic Languages | Intro to Linux" />
   
   <meta name="twitter:description" content="CGR book for the Introduction to command line bioinformatics workshop" />
-  <meta name="twitter:image" content="/figures/CGR_strips.png" />
+  <meta name="twitter:image" content="/figures/CGR_large.png" />
 
 <meta name="author" content="Matthew R. Gemmell" />
 
 
-<meta name="date" content="2023-02-08" />
+<meta name="date" content="2025-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   <link rel="shortcut icon" href="figures/CGR_favicon.png" type="image/x-icon" />
 <link rel="prev" href="13-Advanced_practice_exercise.html"/>
-<link rel="next" href="15-Answers.html"/>
+<link rel="next" href="15-Appendix.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,9 +52,22 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet" />
+<link href="libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet" />
+<script src="libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+<script src="libs/tippy-binding-0.1.0/tippy.js"></script>
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -119,6 +132,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 <link rel="stylesheet" href="www/webex.css" type="text/css" />
@@ -134,11 +151,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li class="toc-logo"><a href="https://www.liverpool.ac.uk/genomic-research/" target="blank"><img src="figures/CGR_strips.png"></a></li>
-<li><a>Intro to Unix</a></li>
+<li class="toc-logo"><a href="https://www.liverpool.ac.uk/genomic-research/" target="blank">
+<img src="figures/CGR_large.png" width=250px></a></li>
+<li><a>Intro to Linux</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="01-Intro_to_Unix.html"><a href="01-Intro_to_Unix.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="1" data-path="01-Intro_to_Unix.html"><a href="01-Intro_to_Unix.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="01-Intro_to_Unix.html"><a href="01-Intro_to_Unix.html#table-of-contents"><i class="fa fa-check"></i>Table of contents</a></li>
+</ul></li>
 <li class="part"><span><b>Part 1</b></span></li>
 <li class="chapter" data-level="2" data-path="02-Linux_Introduction.html"><a href="02-Linux_Introduction.html"><i class="fa fa-check"></i><b>2</b> Linux</a></li>
 <li class="chapter" data-level="3" data-path="03-Starting.html"><a href="03-Starting.html"><i class="fa fa-check"></i><b>3</b> Starting</a>
@@ -186,7 +207,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html#deleting-files-and-directories"><i class="fa fa-check"></i><b>6.4</b> Deleting Files and Directories</a></li>
 <li class="chapter" data-level="6.5" data-path="06-Manipulating_directories.html"><a href="06-Manipulating_directories.html#mcqs-manipulating-directories"><i class="fa fa-check"></i><b>6.5</b> MCQs: Manipulating directories</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="07-Exercise1.html"><a href="07-Exercise1.html"><i class="fa fa-check"></i><b>7</b> Exercise 1</a></li>
+<li class="chapter" data-level="7" data-path="07-Exercise1.html"><a href="07-Exercise1.html"><i class="fa fa-check"></i><b>7</b> Exercise 1</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07-Exercise1.html"><a href="07-Exercise1.html#exercise-1-tasks"><i class="fa fa-check"></i><b>7.1</b> Exercise 1 tasks</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="07-Exercise1.html"><a href="07-Exercise1.html#task-1"><i class="fa fa-check"></i><b>7.1.1</b> Task 1</a></li>
+<li class="chapter" data-level="" data-path="07-Exercise1.html"><a href="07-Exercise1.html#task-2"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="07-Exercise1.html"><a href="07-Exercise1.html#task-3"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="07-Exercise1.html"><a href="07-Exercise1.html#task-4"><i class="fa fa-check"></i>Task 4</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="07-Exercise1.html"><a href="07-Exercise1.html#exercise-1-conclusion"><i class="fa fa-check"></i><b>7.2</b> Exercise 1 conclusion</a></li>
+</ul></li>
 <li class="part"><span><b>Part 2</b></span></li>
 <li class="chapter" data-level="8" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html"><i class="fa fa-check"></i><b>8</b> File reading and processing</a>
 <ul>
@@ -203,8 +234,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.7" data-path="08-File_reading_and_processing.html"><a href="08-File_reading_and_processing.html#mcqs-file-reading-and-processing"><i class="fa fa-check"></i><b>8.7</b> MCQs: File reading and processing</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="09-Recap.html"><a href="09-Recap.html"><i class="fa fa-check"></i><b>9</b> Recap</a></li>
-<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a></li>
-<li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a></li>
+<li class="chapter" data-level="10" data-path="10-Fastq.html"><a href="10-Fastq.html"><i class="fa fa-check"></i><b>10</b> Fastq format</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="10-Fastq.html"><a href="10-Fastq.html#format"><i class="fa fa-check"></i><b>10.1</b> Format</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="11-Exercise2.html"><a href="11-Exercise2.html"><i class="fa fa-check"></i><b>11</b> Exercise 2</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="11-Exercise2.html"><a href="11-Exercise2.html#exercise-2-tasks"><i class="fa fa-check"></i><b>11.1</b> Exercise 2 tasks</a>
+<ul>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-1-1"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-2-1"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-3-1"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-4-1"><i class="fa fa-check"></i>Task 4</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-5"><i class="fa fa-check"></i>Task 5</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-6"><i class="fa fa-check"></i>Task 6</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-7"><i class="fa fa-check"></i>Task 7</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-8"><i class="fa fa-check"></i>Task 8</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-9"><i class="fa fa-check"></i>Task 9</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-10"><i class="fa fa-check"></i>Task 10</a></li>
+<li class="chapter" data-level="" data-path="11-Exercise2.html"><a href="11-Exercise2.html#task-11"><i class="fa fa-check"></i>Task 11</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="11-Exercise2.html"><a href="11-Exercise2.html#exercise-2-conclusion"><i class="fa fa-check"></i><b>11.2</b> Exercise 2 conclusion</a></li>
+</ul></li>
 <li class="part"><span><b>Advanced topics</b></span></li>
 <li class="chapter" data-level="12" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html"><i class="fa fa-check"></i><b>12</b> Advanced Linux practice</a>
 <ul>
@@ -216,28 +267,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.6" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#permissions"><i class="fa fa-check"></i><b>12.6</b> Permissions</a></li>
 <li class="chapter" data-level="12.7" data-path="12-Advanced_linux_practice.html"><a href="12-Advanced_linux_practice.html#mcqs-advanced-linux"><i class="fa fa-check"></i><b>12.7</b> MCQs: Advanced linux</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html"><i class="fa fa-check"></i><b>13</b> Advance practice exercise</a></li>
+<li class="chapter" data-level="13" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html"><i class="fa fa-check"></i><b>13</b> Advance practice exercise</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#advanced-tasks"><i class="fa fa-check"></i><b>13.1</b> Advanced tasks</a>
+<ul>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-1-2"><i class="fa fa-check"></i>Task 1</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-2-2"><i class="fa fa-check"></i>Task 2</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-3-2"><i class="fa fa-check"></i>Task 3</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-4-2"><i class="fa fa-check"></i>Task 4</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-5-1"><i class="fa fa-check"></i>Task 5</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-6-1"><i class="fa fa-check"></i>Task 6</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-7-1"><i class="fa fa-check"></i>Task 7</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-8-1"><i class="fa fa-check"></i>Task 8</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-9-1"><i class="fa fa-check"></i>Task 9</a></li>
+<li class="chapter" data-level="" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#task-10-1"><i class="fa fa-check"></i>Task 10</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="13-Advanced_practice_exercise.html"><a href="13-Advanced_practice_exercise.html#advanced-exercise-conclusion"><i class="fa fa-check"></i><b>13.2</b> Advanced exercise conclusion</a></li>
+</ul></li>
 <li class="chapter" data-level="14" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html"><i class="fa fa-check"></i><b>14</b> Bioinformatic Languages</a>
 <ul>
 <li class="chapter" data-level="14.1" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#awk"><i class="fa fa-check"></i><b>14.1</b> awk</a></li>
 <li class="chapter" data-level="14.2" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python"><i class="fa fa-check"></i><b>14.2</b> Python</a></li>
 <li class="chapter" data-level="14.3" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#perl"><i class="fa fa-check"></i><b>14.3</b> Perl</a></li>
 <li class="chapter" data-level="14.4" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#python-or-perl"><i class="fa fa-check"></i><b>14.4</b> Python or Perl?</a></li>
-<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#ruby"><i class="fa fa-check"></i><b>14.5</b> Ruby</a></li>
-<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.6</b> Golang (AKA Go)</a></li>
-<li class="chapter" data-level="14.7" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.7</b> R</a></li>
+<li class="chapter" data-level="14.5" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#golang-aka-go"><i class="fa fa-check"></i><b>14.5</b> Golang (AKA Go)</a></li>
+<li class="chapter" data-level="14.6" data-path="14-Bioinformatica_languages.html"><a href="14-Bioinformatica_languages.html#r"><i class="fa fa-check"></i><b>14.6</b> R</a></li>
 </ul></li>
-<li class="part"><span><b>Answers</b></span></li>
-<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html"><i class="fa fa-check"></i>Exercise 1</a></li>
-<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exercise2_answers"><i class="fa fa-check"></i>Exercise 2</a></li>
-<li class="chapter" data-level="" data-path="15-Answers.html"><a href="15-Answers.html#exerciseadv_answers"><i class="fa fa-check"></i>Advanced exercise</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="16-Appendix.html"><a href="16-Appendix.html"><i class="fa fa-check"></i><b>A</b> Practical cheat sheet</a></li>
-<li class="chapter" data-level="B" data-path="16-Appendix.html"><a href="16-Appendix.html#windows-terminals"><i class="fa fa-check"></i><b>B</b> Windows terminals</a></li>
-<li class="chapter" data-level="C" data-path="16-Appendix.html"><a href="16-Appendix.html#ssh"><i class="fa fa-check"></i><b>C</b> <code>ssh</code></a></li>
-<li class="chapter" data-level="D" data-path="16-Appendix.html"><a href="16-Appendix.html#file-transferring"><i class="fa fa-check"></i><b>D</b> File transferring</a></li>
-<li class="chapter" data-level="E" data-path="16-Appendix.html"><a href="16-Appendix.html#anaconda"><i class="fa fa-check"></i><b>E</b> ANACONDA</a></li>
-<li class="chapter" data-level="F" data-path="16-Appendix.html"><a href="16-Appendix.html#vim"><i class="fa fa-check"></i><b>F</b> vim</a></li>
+<li class="chapter" data-level="A" data-path="15-Appendix.html"><a href="15-Appendix.html"><i class="fa fa-check"></i><b>A</b> CGR</a></li>
+<li class="chapter" data-level="B" data-path="15-Appendix.html"><a href="15-Appendix.html#cheatsheet"><i class="fa fa-check"></i><b>B</b> Practical cheat sheet</a></li>
+<li class="chapter" data-level="C" data-path="15-Appendix.html"><a href="15-Appendix.html#windows-terminals"><i class="fa fa-check"></i><b>C</b> Windows terminals</a></li>
+<li class="chapter" data-level="D" data-path="15-Appendix.html"><a href="15-Appendix.html#ssh"><i class="fa fa-check"></i><b>D</b> <code>ssh</code></a></li>
+<li class="chapter" data-level="E" data-path="15-Appendix.html"><a href="15-Appendix.html#file-transferring"><i class="fa fa-check"></i><b>E</b> File transferring</a></li>
+<li class="chapter" data-level="F" data-path="15-Appendix.html"><a href="15-Appendix.html#mamba"><i class="fa fa-check"></i><b>F</b> Mamba</a>
+<ul>
+<li class="chapter" data-level="F.1" data-path="15-Appendix.html"><a href="15-Appendix.html#mamba_install"><i class="fa fa-check"></i><b>F.1</b> Mamba installation</a></li>
+</ul></li>
+<li class="chapter" data-level="G" data-path="15-Appendix.html"><a href="15-Appendix.html#vim"><i class="fa fa-check"></i><b>G</b> vim</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -250,7 +316,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to Unix</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Intro to Linux</a>
           </h1>
         </div>
 
@@ -260,9 +326,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bfxlanguages" class="section level1 hasAnchor" number="14">
 <h1><span class="header-section-number">Chapter 14</span> Bioinformatic Languages<a href="14-Bioinformatica_languages.html#bfxlanguages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="figures/languages.png" width="20%" style="display: block; margin: auto;" /></p>
+<center>
+<img src="figures/languages.png" style="width:200px; background: white; border-radius:5px" />
+</center>
 <p>Unfortunately you cannot do everything you would want directly on the Linux command line. Even the tasks you can do are sometimes not very efficient or easy.
-Fortunately there are many other programming languages you can use. There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.</p>
+Fortunately there are many other programming languages you can use.</p>
+<p>There is a large amount of other programming languages and it can be hard to know which one to learn. Below is a list of commonly used bioinformatic program languages with a brief summary on their purpose and links to online resources to introduce you to the language.</p>
 <div id="awk" class="section level2 hasAnchor" number="14.1">
 <h2><span class="header-section-number">14.1</span> awk<a href="14-Bioinformatica_languages.html#awk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><code>awk</code> is typically used as a data extraction and reporting tool. It is very good due to its power and versatility.</p>
@@ -273,10 +342,10 @@ Fortunately there are many other programming languages you can use. There is a l
 </div>
 <div id="python" class="section level2 hasAnchor" number="14.2">
 <h2><span class="header-section-number">14.2</span> Python<a href="14-Bioinformatica_languages.html#python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/python.png" width="20%" style="display: block; margin: auto;" />
-Python is used for software development and other applications It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.</p>
-<p>Tutorial website:</p>
-<p><a href="http://pythonforbiologists.com/index.php/introduction-to-python-for-biologists/" class="uri">http://pythonforbiologists.com/index.php/introduction-to-python-for-biologists/</a></p>
+<center>
+<img src="figures/python.png" style="width:200px; border-radius:15px; background:white" />
+</center>
+<p>Python is used for software development and other applications. It is favoured in Bioinformatics due to its relative ease to learn and it is able to handle strings well (i.e. genetic code). There are also many packages for python that help the analysis of biological data and other scientific data.</p>
 <p>Python website:</p>
 <p><a href="https://www.python.org/" class="uri">https://www.python.org/</a></p>
 <p>BioPython:</p>
@@ -284,8 +353,10 @@ Python is used for software development and other applications It is favoured in
 </div>
 <div id="perl" class="section level2 hasAnchor" number="14.3">
 <h2><span class="header-section-number">14.3</span> Perl<a href="14-Bioinformatica_languages.html#perl" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/perl.png" width="20%" style="display: block; margin: auto;" />
-Perl is a similar language to python with similar uses. The main difference is how they look.</p>
+<center>
+<img src="figures/perl.png" style="width:200px; border-radius:15px; background:null" />
+</center>
+<p>Perl is a similar language to python with similar uses. The main difference is how they look.</p>
 <p>Tutorial:</p>
 <p><a href="https://www.tutorialspoint.com/perl/perl_introduction.htm" class="uri">https://www.tutorialspoint.com/perl/perl_introduction.htm</a></p>
 <p>Perl website:</p>
@@ -295,25 +366,15 @@ Perl is a similar language to python with similar uses. The main difference is h
 </div>
 <div id="python-or-perl" class="section level2 hasAnchor" number="14.4">
 <h2><span class="header-section-number">14.4</span> Python or Perl?<a href="14-Bioinformatica_languages.html#python-or-perl" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Generally speaking people normally choose to either learn python or perl. However there are many bioinformatic tools written in perl and many written in python. Therefore it is good to know a bit in both so you can debug scripts and specialise in one so you can write your own scripts. Our suggestion would be to specialise in Python due to its ease to learn and its growing popularity in the Bioinformatics field. However there are also other upcoming programming languages that are becoming more popular in bioinformatics, so you may like to give them a look.</p>
+<p>Generally the answer is Python. Many programs are written in Python so even if you don't make any programs yourself it can be useful to know a little python so you can debug Python scripts.</p>
+<p>Some programs are written in Perl but it has lost a lot of popularity so there are less and less programs written in Perl. Many Perl programs that were useful are now outdated.</p>
 </div>
-<div id="ruby" class="section level2 hasAnchor" number="14.5">
-<h2><span class="header-section-number">14.5</span> Ruby<a href="14-Bioinformatica_languages.html#ruby" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/ruby.png" width="20%" style="display: block; margin: auto;" />
-A programming language that is becoming more popular in bioinformatics due to its beginner friendliness.</p>
-<p>Tutorial:</p>
-<p><a href="http://rubylearning.com/" class="uri">http://rubylearning.com/</a></p>
-<p>Ruby website:</p>
-<p><a href="https://www.ruby-lang.org/en/" class="uri">https://www.ruby-lang.org/en/</a></p>
-<p>BioRuby:</p>
-<p><a href="http://bioruby.org/" class="uri">http://bioruby.org/</a></p>
-<p>Why learn Ruby?</p>
-<p><a href="http://www.bestprogramminglanguagefor.me/why-learn-ruby" class="uri">http://www.bestprogramminglanguagefor.me/why-learn-ruby</a></p>
-</div>
-<div id="golang-aka-go" class="section level2 hasAnchor" number="14.6">
-<h2><span class="header-section-number">14.6</span> Golang (AKA Go)<a href="14-Bioinformatica_languages.html#golang-aka-go" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/golang.png" width="20%" style="display: block; margin: auto;" />
-Another easy programming language with a library specifically made for bioinformatics.</p>
+<div id="golang-aka-go" class="section level2 hasAnchor" number="14.5">
+<h2><span class="header-section-number">14.5</span> Golang (AKA Go)<a href="14-Bioinformatica_languages.html#golang-aka-go" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="figures/golang.png" style="width:200px; border-radius:15px; background:white" />
+</center>
+<p>Another easy programming language with a library specifically made for bioinformatics. Has not been widely adopted.</p>
 <p>Tutorial:</p>
 <p><a href="https://tour.golang.org/welcome/1" class="uri">https://tour.golang.org/welcome/1</a></p>
 <p>Go website:</p>
@@ -321,10 +382,12 @@ Another easy programming language with a library specifically made for bioinform
 <p>biogo:</p>
 <p><a href="https://github.com/biogo/biogo" class="uri">https://github.com/biogo/biogo</a></p>
 </div>
-<div id="r" class="section level2 hasAnchor" number="14.7">
-<h2><span class="header-section-number">14.7</span> R<a href="14-Bioinformatica_languages.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><img src="figures/R.png" width="20%" style="display: block; margin: auto;" />
-R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.</p>
+<div id="r" class="section level2 hasAnchor" number="14.6">
+<h2><span class="header-section-number">14.6</span> R<a href="14-Bioinformatica_languages.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<center>
+<img src="figures/R.png" style="width:200px; border-radius:15px; border:5px solid white; background:white" />
+</center>
+<p>R is a very powerful programming language for statistical analysis and visualisation. It unfortunately has a large barrier to entry and normally quite unclear documentation. However it will unlikely be surpassed by another language any time soon due to its widespread use and large amount of very useful and powerful packages for various uses in the public domain. We would recommend using the IDE Rstudio when using R.</p>
 <p>Tutorial:</p>
 <p><a href="https://swirlstats.com/" class="uri">https://swirlstats.com/</a></p>
 <p>R Website:</p>
@@ -345,25 +408,41 @@ R is a very powerful programming language for statistical analysis and visualisa
 update_total_correct = function() {
   console.log("webex: update total_correct");
 
-  if (t = document.getElementById("webex-total_correct")) {
-    var correct = document.getElementsByClassName("webex-correct").length;
-    var solvemes = document.getElementsByClassName("webex-solveme").length;
-    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
-    var selects = document.getElementsByClassName("webex-select").length;
-    
-    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
   }
 }
 
 /* webex-solution button toggling function */
 b_func = function() {
   console.log("webex: toggle hide");
-  
+
   var cl = this.parentElement.classList;
   if (cl.contains('open')) {
     cl.remove("open");
   } else {
     cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
   }
 }
 
@@ -417,9 +496,9 @@ solveme_func = function(e) {
 /* function for checking select answers */
 select_func = function(e) {
   console.log("webex: check select");
-  
+
   var cl = this.classList
-  
+
   /* add style */
   cl.remove("webex-incorrect");
   cl.remove("webex-correct");
@@ -428,7 +507,7 @@ select_func = function(e) {
   } else if (this.value != "blank") {
     cl.add("webex-incorrect");
   }
-  
+
   update_total_correct();
 }
 
@@ -439,25 +518,25 @@ radiogroups_func = function(e) {
   var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
   var cl = checked_button.parentElement.classList;
   var labels = checked_button.parentElement.parentElement.children;
-  
+
   /* get rid of styles */
   for (i = 0; i < labels.length; i++) {
     labels[i].classList.remove("webex-incorrect");
     labels[i].classList.remove("webex-correct");
   }
-  
+
   /* add style */
   if (checked_button.value == "answer") {
     cl.add("webex-correct");
   } else {
     cl.add("webex-incorrect");
   }
-  
+
   update_total_correct();
 }
 
 window.onload = function() {
-  console.log("onload");
+  console.log("webex onload");
   /* set up solution buttons */
   var buttons = document.getElementsByTagName("button");
 
@@ -465,6 +544,22 @@ window.onload = function() {
     if (buttons[i].parentElement.classList.contains('webex-solution')) {
       buttons[i].onclick = b_func;
     }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
   }
 
   /* set up webex-solveme inputs */
@@ -492,18 +587,21 @@ window.onload = function() {
     /* attach checking function */
     solveme[i].onkeyup = solveme_func;
     solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
   }
-  
+
   /* set up radiogroups */
   var radiogroups = document.getElementsByClassName("webex-radiogroup");
   for (var i = 0; i < radiogroups.length; i++) {
     radiogroups[i].onchange = radiogroups_func;
   }
-  
+
   /* set up selects */
   var selects = document.getElementsByClassName("webex-select");
   for (var i = 0; i < selects.length; i++) {
     selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
   }
 
   update_total_correct();
@@ -516,7 +614,7 @@ window.onload = function() {
         </div>
       </div>
 <a href="13-Advanced_practice_exercise.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="15-Answers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="15-Appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -530,29 +628,29 @@ window.onload = function() {
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": null,
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": null,
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": null,
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": null,
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
 });
 });
 </script>
