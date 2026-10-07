@@ -1,0 +1,50 @@
+---
+engine: knitr
+---
+# Introduction {#intro}
+![](/images/linux_beginner.png){style="width:200px" fig-align="center"}
+
+Bioinformatics is an increasingly important skill for biological scientists. Many bioinformatic tools can only be run on Linux based operating systems. This course aims to introduce you to Linux and is aimed at beginners and novices to the command line.
+
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by an online interactive book. The book will contain theory, practice code, and exercises. Multiple choice questions will help reinforce what you have learnt throughout the book.
+
+## Learning outcomes
+![](/images/chalkboard.png){style="width:200px" fig-align="center"}
+
+
+At the end of the course learners will be able to:
+
+-   Explain how the user, shell, and kernel interact with each other in the Linux OS
+-   Navigate & manipulate directories in the Linux environment
+-   List and view the contents of directories
+-   Carry out a variety of commands with files including printing them to terminal
+-   Utilise the text editor nano to create, edit, and save files
+-   Understand the structure of fastq files
+
+There are additional materials in the [Advanced part](/advanced/advanced_linux_practice.qmd) which include some advanced Linux commands and introductions to other programming languages used by bioinformaticians.
+
+Commands are in the following font, colour, and box. They should be run in the command line.
+
+```{bash eval=FALSE}
+echo "This is a command example" 
+```
+
+In some pages there are video walk-throughs. These are optional and give you a guided visual walk-through of running the practice code in the page.
+
+Additionally, please use the [cheatsheet](/appendix/cheat_sheet.qmd) as a reminder of all the commands you will be learning.
+
+## Start
+
+![](/images/linux_beginner.png){style="width:150px" fig-align="center"}
+
+To start please go to the [Overview part](/overview/linux_introduction.qmd).
+
+```{r, echo=FALSE}
+#Tippy tooltips
+tippy::tippy_this(elementId = "os", 
+                  tooltip = "Operating System",
+                  arrow = TRUE, placement = "bottom")
+tippy::tippy_this(elementId = "gui", 
+                  tooltip = "Graphical User Interface",
+                  arrow = TRUE, placement = "bottom")
+```
