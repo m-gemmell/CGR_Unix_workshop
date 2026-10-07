@@ -129,4 +129,4 @@ sed "s/_[AGCT]*_/: Sequence /" | sed "s/ 1:$//"
 ## Advanced exercise conclusion
 ![](/images/finish.png){style="width:200px; background: white; border-radius:5px" fig-align="center"}
 
-Superlative! Those were definitely difficult tasks so great going getting through them all. That is all the practice and challenges done, there is some information on [other languages](/advanced/bioinformatic_languages.qmd) and the [appendix](/appendix/neof.qmd) you can continue onto.
+Superlative! Those were definitely difficult tasks so great going getting through them all. That is all the practice and challenges done, there is some information on [other languages](/advanced/bioinformatic_languages.qmd) and the [appendix](/appendix/cheat_sheet.qmd) you can continue onto.

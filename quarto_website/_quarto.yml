@@ -6,14 +6,13 @@ knitr: true
 #Website
 website:
   bread-crumbs: false
-  favicon: images/NEOF_favicon.png
+  favicon: images/CGR_favicon.png
   page-navigation: true
-  title: "NEOF Intro to Linux"
-  description: "Website for the NEOF Intro to Linux workshop/course"
+  title: "CGR Intro to Linux"
+  description: "Website for the CGR Intro to Linux workshop/course"
 ##Navbar
   navbar:
-    title: NEOF Intro to Linux
-    logo: "images/NEOF_logo_no_background.png"
+    title: CGR Intro to Linux
     collapse-below: lg
 ###Navbar left
     left:
@@ -28,24 +27,19 @@ website:
       - text: "Advanced"
         href: advanced/advanced_linux_practice.qmd
       - text: "Appendix"
-        href: appendix/neof.qmd
+        href: appendix/cheat_sheet.qmd
 ###Navbar right
     right:
     - icon: house-fill
-      href: https://neof.org.uk/training/
-      aria-label: Neof website
+      href: https://www.liverpool.ac.uk/genomic-research/
+      aria-label: CGR website
     - icon: linkedin
-      href: https://www.linkedin.com/in/training-neof/
+      href: https://www.linkedin.com/showcase/liverpool-shared-research-facilities
       aria-label: LinkedIn
-    - icon: bluesky
-      href: https://bsky.app/profile/nerc-eof.bsky.social
-      aria-label: Bluesky
 ###Page footer
   page-footer:
-    left: |
-      [![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png){fig-alt="CC BY-SA 4.0" height=30px}](https://creativecommons.org/licenses/by-nc-sa/4.0/)
     center: |
-      [![](//images/NEOF_rounded_corners.png){fig-alt="NEOF" height=60px}](https://neof.org.uk/)
+      [![](/images/CGR_large.png){fig-alt="CGR" height=60px}](https://www.liverpool.ac.uk/genomic-research/)
 ##Sidebar
   sidebar:
     - id: Intro
@@ -95,7 +89,6 @@ website:
       title: "Appendix"
       style: "floating"
       contents:
-        - href: appendix/neof.qmd
         - href: appendix/cheat_sheet.qmd
         - href: appendix/on_your_pc.qmd
         - href: appendix/mamba.qmd

@@ -34,7 +34,6 @@ This practical is broken up into the following parts.
     - __[Advanced practice exercise](/advanced/advanced_practice_exercise.qmd):__ Ten tasks utilising the advanced linux topics
     - __[Bioinformatic languages](/advanced/bioinformatic_languages.qmd):__ Brief intros to `awk`, Python, Perl, and R
 6. Appendix
-    - __[NEOF](/appendix/neof.qmd):__ Links to various NEOF resources
     - __[Cheat sheet](/appendix/cheat_sheet.qmd):__ Course cheat sheet
     - __[On your computer](/appendix/on_your_pc.qmd):__ Guidance on using a HPC and linux with your own pc
     - __[Mamba](/appendix/mamba.qmd):__ Information and links for mamba, a tool to more easily install bioinformatic tools/programs
